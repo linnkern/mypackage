@@ -1,8 +1,6 @@
-[submodule "src/components/component-a"]
-	path = src/components/component-a
+[submodule "src/mypackage/components/component-a"]
+	path = src/mypackage/components/component-a
 	url = https://github.com/linnkern/component-a.git
-	branch = master
-[submodule "src/components/component-b"]
-	path = src/components/component-b
+[submodule "src/mypackage/components/component-b"]
+	path = src/mypackage/components/component-b
 	url = https://github.com/linnkern/component-b.git
-	branch = master
