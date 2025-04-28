@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'mypackage'
+dynamic = ["version"]
+#version = "0.0.0"
+description = 'A sample Python package demonstrating submodules'
+authors = [
+    { name='Chin, Linn Kern', email="linnkern.chin@amd.com"}
+]
+requires-python='>=3.10'
+readme='README.md'
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ['mypackage*']
+
+[tool.setuptools.package-data]
+"*" = ['*.md', '*.txt']
+#
+[tool.setuptools.dynamic]
+version = { attr = "mypackage.version.__version__" }
+#include = ["mypackage*"]
+#include = ["src.components.components-b"]
