@@ -3,9 +3,26 @@
 Folder structure
 ```
 mypackage
-└───components
-    ├───component-a (submodule)
-    └───component-b  (submodule)
+│   .gitignore
+│   .gitmodules
+│   pyproject.toml
+│   README.md
+│   __version__.py
+│
+└───src
+    │   __init__.py
+    │
+    └───components
+        │   __init__.py
+        │
+        ├───component-a (submodule)
+        │       component.py
+        │       README.md
+        │
+        └───component-b (submodule)
+                component.py
+                README.md
+
 ```
 
 Study on gitsubmodule: https://git-scm.com/book/en/v2/Git-Tools-Submodules
