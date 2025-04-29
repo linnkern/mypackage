@@ -1,6 +1,3 @@
 [submodule "src/mypackage/components/component-b"]
 	path = src/mypackage/components/component-b
 	url = https://github.com/linnkern/component-b.git
-[submodule "src/mypackage/components/component-c"]
-	path = src/mypackage/components/component-c
-	url = https://github.com/linnkern/component-c.git
