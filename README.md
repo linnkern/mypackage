@@ -52,3 +52,20 @@ git rm --cached <submodule path>
 git rm .gitmodules # Remove manually if you have multiple submodules
 rm -rf ./<submodule directory>/.git
 ```
+
+Summary of submodule commands
+```mermaid
+flowchart TD
+    A[Main Repository<br>mypackage] -->|references| B[Submodule Repository<br>component-a]
+    A -->|references| C[Submodule Repository<br>component-b]
+    
+    B -->|commit SHA| D[specific commit in component-a]
+    C -->|commit SHA| E[specific commit in component-b]
+    
+    subgraph "Git Commands"
+    F["git clone --recurse-submodules"] -->|clones with submodules| A
+    G["git submodule add"] -->|adds new| A
+    H["git pull --recurse-submodules"] -->|updates| A
+    I["git submodule update --remote"] -->|updates references to<br>latest commits| B & C
+    end
+```
