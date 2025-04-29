@@ -35,3 +35,17 @@ How to update submodules
 ```shell
 git submodule update --remote
 ```
+
+How to remove submodule from repo
+```shell
+git submodule deinit -f <submodule paht>
+rm -Force .git\modules\<submodule path>
+git rm -f <submodule path>
+```
+
+How to turn a submodule into a directory
+```shell
+git rm --cached <submodule path>
+git rm .gitmodules # Remove manually if you have multiple submodules
+rm -rf ./<submodule directory>/.git
+```
