@@ -3,26 +3,14 @@
 Folder structure
 ```
 mypackage
-│   .gitignore
-│   .gitmodules
-│   pyproject.toml
-│   README.md
-│   __version__.py
-│
 └───src
-    │   __init__.py
-    │
-    └───components
-        │   __init__.py
+    └───mypackage
         │
-        ├───component-a (submodule)
-        │       component.py
-        │       README.md
-        │
-        └───component-b (submodule)
-                component.py
-                README.md
-
+        └───components
+            │
+            ├───component-a (submodule)
+            │
+            └───component-b (submodule)
 ```
 
 Study on gitsubmodule: https://git-scm.com/book/en/v2/Git-Tools-Submodules
@@ -30,6 +18,12 @@ Study on gitsubmodule: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 How to clone for Repo with submodules
 ```shell
 git clone --recurse-submodules https://github.com/linnkern/mypackage.git
+```
+
+How to add new component as submodule
+```shell
+git submodule add <gitthub repo url> <directory>
+git submodule init # You will see there is .gitmodules file, submodule details will be added in .gitsubmodule
 ```
 
 How to pull for Repo with submodules
