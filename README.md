@@ -3,6 +3,9 @@
 Folder structure
 ```
 mypackage
+│   .gitmodules
+│   pyproject.toml
+│   README.md
 └───src
     └───mypackage
         │
