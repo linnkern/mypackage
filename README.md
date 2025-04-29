@@ -1,4 +1,4 @@
-# This Repo is used for demo submodule repo
+# This Repo is used for demo submodule repo + github template
 
 Folder structure
 ```
